@@ -4,9 +4,17 @@ on:
   issues:
     types: [opened, transferred]
 jobs:
-  ComentarIssue:
+  lorem-ipsum-comment:
+    if: github.event.label.name == 'lorem ipsum'
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
-    name: Comentar Issue
     steps:
-      - name: issue comment
-        uses: kyoncy/issue-comment-actions@v1
+      - run: gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: >
+            Lorem ipsum is placeholder text commonly used in the graphic, print,
+            and publishing industries for previewing layouts and visual mockups.

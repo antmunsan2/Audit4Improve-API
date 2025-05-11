@@ -1,0 +1,12 @@
+name: Flujo de trabajo que se ejecuta con los issues
+on:
+  workflow_dispatch:
+  issues:
+    types:[opened, transferred]
+jobs:
+  ComentarIssue:
+    runs-on: ubuntu-latest
+    name: Comentar Issue
+    steps:
+      - name: issue comment
+        uses: kyoncy/issue-comment-actions@v1

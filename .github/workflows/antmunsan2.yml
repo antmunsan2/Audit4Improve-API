@@ -2,7 +2,7 @@ name: Flujo de trabajo que se ejecuta con los issues
 on:
   workflow_dispatch:
   issues:
-    types: [opened, transferred]
+    types: [opened, labeled]
 jobs:
   comment_on_new_issue:
     runs-on: ubuntu-latest

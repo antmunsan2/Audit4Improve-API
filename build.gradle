@@ -41,7 +41,7 @@ publishing {
         
             groupId = 'us.mitfs.samples'
             artifactId = 'a4i'
-            version = 'V.0.2-antmunsan2-CI'
+            version = 'V.0.2-antmunsan2'
 
             from components.java
         }

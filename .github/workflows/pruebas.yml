@@ -46,7 +46,7 @@ jobs:
       - name: Descargar artefactos generados
         uses: actions/download-artifact@v3
         with:
-          name: a4i
+          name: us.mitfs.samples.a4i
 
       - name: Configurando java
         uses: actions/setup-java@v3
